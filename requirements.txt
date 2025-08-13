@@ -11,4 +11,5 @@ langchain-openai==0.3.24
 langchain-community==0.3.26
 -e.
 
-conda create -n Medical_Chatbot python=3.10 -y
+# conda create -n Medical_Chatbot python=3.10 -y
+# conda activate Medical_Chatbot
