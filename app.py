@@ -11,15 +11,48 @@ import os
 
 app = Flask(__name__)
 
-# load_dotenv()
+load_dotenv()
 
-# PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-# os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
-# os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
+os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
-# embedding=download_embedding()
+embedding=download_embedding()
+
+index_name = "medical-chatbot"
+
+chatModel = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+
+docsearch = PineconeVectorStore.from_existing_index(
+    index_name=index_name,
+    embedding=embedding
+)
+
+
+retriever = docsearch.as_retriever(search_type="similarity",search_kwargs={"k":3})
+
+prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", system_prompt),
+        ("human", "{input}"),
+    ]
+)
+
+
+question_answer_chain = create_stuff_documents_chain(chatModel, prompt)
+rag_chain = create_retrieval_chain(retriever, question_answer_chain)
+
+@app.route("/get", methods=["GET", "POST"])
+def chat():
+    msg = request.form["msg"]
+    input = msg
+    print(input)
+    response = rag_chain.invoke({"input": msg})
+    print("Response : ", response["answer"])
+    return str(response["answer"])
+
 
 
 @app.route("/")

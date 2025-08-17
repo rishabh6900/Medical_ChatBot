@@ -38,8 +38,8 @@ def text_split(minimal_docs):
         chunk_overlap=200,
         length_function = len 
     )
-    texts_chunk = text_spliter.split_documents(minimal_docs)
-    return texts_chunk
+    text_chunk = text_spliter.split_documents(minimal_docs)
+    return text_chunk
 
 def download_embedding():
     model_name = "BAAI/bge-small-en-v1.5"

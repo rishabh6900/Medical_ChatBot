@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,9 +34,17 @@
         }
 
         @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         header {
@@ -135,8 +144,8 @@
         .hero {
             text-align: center;
             padding: 6rem 0;
-            background: linear-gradient(rgba(28, 28, 28, 0.7), rgba(10, 10, 10, 0.7)), 
-                        url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(28, 28, 28, 0.7), rgba(10, 10, 10, 0.7)),
+                url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             color: white;
             position: relative;
         }
@@ -224,7 +233,7 @@
             left: 0;
             width: 100%;
             height: 100px;
-            background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
             z-index: 1;
             pointer-events: none;
         }
@@ -352,7 +361,8 @@
             margin-top: 3rem;
         }
 
-        .mission-card, .vision-card {
+        .mission-card,
+        .vision-card {
             background-color: white;
             border-radius: 15px;
             padding: 2rem;
@@ -360,12 +370,14 @@
             transition: all 0.3s ease;
         }
 
-        .mission-card:hover, .vision-card:hover {
+        .mission-card:hover,
+        .vision-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .mission-card h3, .vision-card h3 {
+        .mission-card h3,
+        .vision-card h3 {
             color: var(--primary);
             margin-bottom: 1.5rem;
             font-size: 1.5rem;
@@ -374,7 +386,8 @@
             justify-content: center;
         }
 
-        .mission-card h3 i, .vision-card h3 i {
+        .mission-card h3 i,
+        .vision-card h3 i {
             margin-right: 10px;
         }
 
@@ -1033,8 +1046,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .bot-message {
@@ -1136,27 +1156,64 @@
         }
 
         @keyframes typingAnimation {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-5px); }
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-5px);
+            }
         }
 
         /* Breathing animation */
         @keyframes breatheIn {
-            0% { transform: scale(1); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
-            50% { transform: scale(1.2); background: linear-gradient(135deg, #651fff, #7c4dff); }
-            100% { transform: scale(1); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+            0% {
+                transform: scale(1);
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+            }
+
+            50% {
+                transform: scale(1.2);
+                background: linear-gradient(135deg, #651fff, #7c4dff);
+            }
+
+            100% {
+                transform: scale(1);
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+            }
         }
 
         @keyframes breatheOut {
-            0% { transform: scale(1); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
-            50% { transform: scale(0.8); background: linear-gradient(135deg, #b388ff, #a982ff); }
-            100% { transform: scale(1); background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+            0% {
+                transform: scale(1);
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+            }
+
+            50% {
+                transform: scale(0.8);
+                background: linear-gradient(135deg, #b388ff, #a982ff);
+            }
+
+            100% {
+                transform: scale(1);
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+            }
         }
 
         /* Floating elements animation */
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .floating {
@@ -1168,7 +1225,7 @@
             .hero h2 {
                 font-size: 2.2rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
@@ -1263,6 +1320,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -1277,14 +1335,15 @@
             <li><a href="#breathing"><i class="fas fa-wind"></i> Breathing</a></li>
             <li><a href="#resources"><i class="fas fa-book-open"></i> Resources</a></li>
             <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-            <li><a href="#about"><i class="fas fa-eye"></i> Visual talk with AI</a></li>
+            <li><a href="#"><i class="fas fa-eye"></i> Visual talk with AI</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
             <h2>Your Mental Health Matters</h2>
-            <p>Take a moment to pause, breathe, and reconnect with yourself. Our tools and resources are here to support you on your journey to better mental health.</p>
+            <p>Take a moment to pause, breathe, and reconnect with yourself. Our tools and resources are here to support
+                you on your journey to better mental health.</p>
             <a href="#meditation" class="btn"><i class="fas fa-headphones"></i> Start Meditating</a>
             <a href="#breathing" class="btn btn-outline"><i class="fas fa-lungs"></i> Try Breathing Exercise</a>
         </div>
@@ -1317,7 +1376,8 @@
                 <div class="feature-card">
                     <div class="feature-icon">🎥</div>
                     <h3>Visual talk with AI</h3>
-                    <p>It analyzes your face and audio, then uses certain techniques to help improve your mental health.</p>
+                    <p>It analyzes your face and audio, then uses certain techniques to help improve your mental health.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1328,21 +1388,28 @@
         <div class="container">
             <h2 class="section-title">About Haven Mind</h2>
             <div class="about-content">
-                <p>SereneMind was founded in 2025 with a simple mission: to make mental health support accessible to everyone. We believe that taking care of your mind should be as easy and natural as taking care of your body.</p>
-                
-                <p>Our platform combines evidence-based techniques with beautiful design to create a calming space where you can find peace, reduce stress, and develop healthier mental habits.</p>
-                
+                <p>SereneMind was founded in 2025 with a simple mission: to make mental health support accessible to
+                    everyone. We believe that taking care of your mind should be as easy and natural as taking care of
+                    your body.</p>
+
+                <p>Our platform combines evidence-based techniques with beautiful design to create a calming space where
+                    you can find peace, reduce stress, and develop healthier mental habits.</p>
+
                 <div class="mission-vision">
                     <div class="mission-card">
                         <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                        <p>To empower individuals with simple, effective tools for mental wellness that can be accessed anytime, anywhere. We aim to break down barriers to mental health support and create a world where everyone has the resources they need to thrive.</p>
+                        <p>To empower individuals with simple, effective tools for mental wellness that can be accessed
+                            anytime, anywhere. We aim to break down barriers to mental health support and create a world
+                            where everyone has the resources they need to thrive.</p>
                     </div>
                     <div class="vision-card">
                         <h3><i class="fas fa-eye"></i> Our Vision</h3>
-                        <p>We envision a future where mental health is prioritized as much as physical health, where people feel comfortable seeking help, and where self-care practices are integrated into daily life.</p>
+                        <p>We envision a future where mental health is prioritized as much as physical health, where
+                            people feel comfortable seeking help, and where self-care practices are integrated into
+                            daily life.</p>
                     </div>
                 </div>
-                
+
                 <!-- <div class="team">
                     <h3 class="section-title">Meet Our Team</h3>
                     <div class="team-members">
@@ -1400,7 +1467,7 @@
                 </div>
                 <div class="player-body">
                     <ul class="track-list">
-                        <li class="track-item active" data-src="\static\audio\Morning Calm.mp3",data-type="audio/mp3">
+                        <li class="track-item active" data-src="\static\audio\Morning Calm.mp3" ,data-type="audio/mp3">
                             <div class="track-info">
                                 <span class="track-number">1</span>
                                 <span class="track-title">Morning Calm</span>
@@ -1459,7 +1526,8 @@
         <div class="container">
             <h2 class="section-title">Breathing Exercise</h2>
             <div class="breathing-instructions">
-                <p>This simple 4-7-8 breathing technique can help reduce anxiety and promote relaxation. Follow the circle's animation and the instructions below.</p>
+                <p>This simple 4-7-8 breathing technique can help reduce anxiety and promote relaxation. Follow the
+                    circle's animation and the instructions below.</p>
             </div>
             <div class="circle-container">
                 <div class="circle" id="breathing-circle">Breathe In</div>
@@ -1467,7 +1535,8 @@
             <div class="instructions">
                 <p id="breath-instruction">Breathe in through your nose for 4 seconds</p>
                 <button id="start-breathing" class="btn"><i class="fas fa-play"></i> Start Exercise</button>
-                <button id="stop-breathing" class="btn" style="display: none; background-color: var(--danger)"><i class="fas fa-stop"></i> Stop</button>
+                <button id="stop-breathing" class="btn" style="display: none; background-color: var(--danger)"><i
+                        class="fas fa-stop"></i> Stop</button>
             </div>
         </div>
     </section>
@@ -1483,7 +1552,8 @@
                     <div class="resource-content">
                         <h3>Understanding Anxiety</h3>
                         <p>Learn about anxiety disorders, symptoms, and coping strategies.</p>
-                        <a href="\static\pages\Understanding_Anxiety.html" class="btn resource-btn"><i class="fas fa-book-reader"></i> Read More</a>
+                        <a href="\static\pages\Understanding_Anxiety.html" class="btn resource-btn"><i
+                                class="fas fa-book-reader"></i> Read More</a>
                     </div>
                 </div>
                 <div class="resource-card">
@@ -1493,10 +1563,11 @@
                     <div class="resource-content">
                         <h3>Meditation Guide</h3>
                         <p>A beginner's guide to establishing a meditation practice.</p>
-                        <a href="\static\pages\Meditation_Guide.html" class="btn resource-btn"><i class="fas fa-book-reader"></i> Read More</a>
+                        <a href="\static\pages\Meditation_Guide.html" class="btn resource-btn"><i
+                                class="fas fa-book-reader"></i> Read More</a>
                     </div>
                 </div>
-                
+
                 <div class="resource-card">
                     <div class="resource-img">
                         <img src="\static\image\mental health professional.jpg" alt="Therapy">
@@ -1504,7 +1575,8 @@
                     <div class="resource-content">
                         <h3>Finding Professional Help</h3>
                         <p>How to find and choose the right mental health professional.</p>
-                        <a href="\static\pages\mental_health_professional.html" class="btn resource-btn"><i class="fas fa-book-reader"></i> Read More</a>
+                        <a href="\static\pages\mental_health_professional.html" class="btn resource-btn"><i
+                                class="fas fa-book-reader"></i> Read More</a>
                     </div>
                 </div>
                 <div class="resource-card">
@@ -1513,11 +1585,12 @@
                     </div>
                     <div class="resource-content">
                         <h3>Sleep</h3>
-                        <p>The vital connection</p>
+                        <p>Unlocking deep rest for a healthier mind and body.</p>
                         <!-- <div class="resource-description">
                             Quality sleep is foundational for mental health, yet many struggle with insomnia and poor sleep habits. Explore how sleep affects mood and cognition, learn about sleep hygiene techniques, and discover relaxation methods to improve sleep quality. This guide includes practical tips for creating a sleep-friendly environment and routine.
                         </div> -->
-                        <a href="\static\pages\Sleep_for_mental_Health.html" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
+                        <a href="\static\pages\Sleep_for_mental_Health.html" class="btn"
+                            style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
                     </div>
                 </div>
                 <div class="resource-card">
@@ -1526,24 +1599,27 @@
                     </div>
                     <div class="resource-content">
                         <h3>Healthy Relationships</h3>
-                        <p>Building supportive connections</p>
+                        <p>Practical ways to build trust, strengthen communication, and deepen emotional connection.</p>
                         <!-- <div class="resource-description">
                             Strong relationships are crucial for mental wellbeing. This resource covers communication skills, boundary setting, and recognizing unhealthy relationship patterns. Learn how to nurture existing relationships, make new connections, and balance social needs with self-care. Includes guidance for discussing mental health with loved ones.
                         </div> -->
-                        <a href="\static\pages\Healthy_Relationships.html" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
+                        <a href="\static\pages\Healthy_Relationships.html" class="btn"
+                            style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
                     </div>
                 </div>
                 <div class="resource-card">
                     <div class="resource-img">
-                        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Nutrition">
+                        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                            alt="Nutrition">
                     </div>
                     <div class="resource-content">
                         <h3>Nutrition & Mood</h3>
-                        <p>Eating for mental health</p>
+                        <p>Nourishing your body to uplift your mind and spirit.</p>
                         <!-- <div class="resource-description">
                             Emerging research shows the gut-brain connection significantly impacts mental health. Discover how certain foods can boost mood and cognitive function, while others may exacerbate anxiety or depression. This guide provides practical nutrition advice, meal planning tips, and explains how to develop a balanced relationship with food.
                         </div> -->
-                        <a href="\static\pages\Nutrition & Mood for Mental.html" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
+                        <a href="\static\pages\Nutrition & Mood for Mental.html" class="btn"
+                            style="padding: 8px 16px; font-size: 0.9rem;">Read More</a>
                     </div>
                 </div>
             </div>
@@ -1566,7 +1642,8 @@
                 <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
             </div>
             <p class="copyright">© 2025 Haven Mind. All rights reserved.</p>
-            <p class="disclaimer">Note: This website is for informational purposes only and is not a substitute for professional medical advice.</p>
+            <p class="disclaimer">Note: This website is for informational purposes only and is not a substitute for
+                professional medical advice.</p>
         </div>
     </footer>
 
@@ -1578,7 +1655,8 @@
         </div>
         <div class="chatbot-body" id="chatbot-body">
             <div class="chatbot-messages" id="chatbot-messages">
-                <div class="message bot-message">Hello! I'm here to help with mental health support. How are you feeling today?</div>
+                <div class="message bot-message">Hello! I'm here to help with mental health support. How are you feeling
+                    today?</div>
             </div>
             <div class="chatbot-input">
                 <input type="text" id="user-input" placeholder="Type your message...">
@@ -1609,27 +1687,27 @@
             // Reset progress
             progressBar.style.width = '0%';
             currentTimeEl.textContent = '0:00';
-            
+
             // Load the new track
             const trackSrc = trackItems[index].getAttribute('data-src');
             audio.src = trackSrc;
-            
+
             // Update UI
             trackItems.forEach(item => item.classList.remove('active'));
             trackItems[index].classList.add('active');
-            
+
             // Set duration
             durationEl.textContent = trackItems[index].querySelector('.track-duration').textContent;
-            
+
             // When metadata is loaded, update duration (in case browser can read it)
-            audio.onloadedmetadata = function() {
+            audio.onloadedmetadata = function () {
                 if (audio.duration) {
                     const mins = Math.floor(audio.duration / 60);
                     const secs = Math.floor(audio.duration % 60);
                     durationEl.textContent = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
                 }
             };
-            
+
             // Play automatically if player was playing
             if (isPlaying) {
                 playPauseTrack();
@@ -1643,7 +1721,7 @@
                 isPlaying = true;
                 playBtn.innerHTML = '<i class="fas fa-pause"></i>';
                 audio.play();
-                
+
                 // Start progress update
                 progressInterval = setInterval(updateProgress, 1000);
             } else {
@@ -1659,12 +1737,12 @@
             if (audio.duration) {
                 const progressPercent = (audio.currentTime / audio.duration) * 100;
                 progressBar.style.width = `${progressPercent}%`;
-                
+
                 // Update current time display
                 const mins = Math.floor(audio.currentTime / 60);
                 const secs = Math.floor(audio.currentTime % 60);
                 currentTimeEl.textContent = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-                
+
                 // Check if track ended
                 if (audio.currentTime >= audio.duration) {
                     nextTrack();
@@ -1675,15 +1753,15 @@
         // Set progress when clicked on progress bar
         function setProgress(e) {
             if (!isDragging) return;
-            
+
             const width = this.clientWidth;
             const clickX = e.offsetX;
             const percent = (clickX / width);
-            
+
             if (audio.duration) {
                 audio.currentTime = percent * audio.duration;
                 progressBar.style.width = `${percent * 100}%`;
-                
+
                 // Update current time display
                 const mins = Math.floor(audio.currentTime / 60);
                 const secs = Math.floor(audio.currentTime % 60);
@@ -1762,12 +1840,12 @@
 
         function startBreathing() {
             if (isBreathing) return;
-            
+
             isBreathing = true;
             startBtn.style.display = 'none';
             stopBtn.style.display = 'inline-block';
             cycleCount = 0;
-            
+
             breatheCycle();
             breathingInterval = setInterval(breatheCycle, 19000); // 4+7+8 = 19 seconds per cycle
         }
@@ -1789,12 +1867,12 @@
                 stopBreathing();
                 return;
             }
-            
+
             // Breathe in (4 seconds)
             breathInstruction.textContent = 'Breathe in through your nose for 4 seconds';
             breathingCircle.textContent = 'Breathe In';
             breathingCircle.style.animation = 'breatheIn 4s ease-in-out';
-            
+
             setTimeout(() => {
                 // Hold (7 seconds)
                 breathInstruction.textContent = 'Hold your breath for 7 seconds';
@@ -1802,14 +1880,14 @@
                 breathingCircle.style.animation = 'none';
                 breathingCircle.style.transform = 'scale(1.2)';
                 breathingCircle.style.background = 'linear-gradient(135deg, #651fff, #7c4dff)';
-                
+
                 setTimeout(() => {
                     // Breathe out (8 seconds)
                     breathInstruction.textContent = 'Breathe out slowly through your mouth for 8 seconds';
                     breathingCircle.textContent = 'Breathe Out';
                     breathingCircle.style.animation = 'breatheOut 8s ease-in-out';
                     breathingCircle.style.background = 'linear-gradient(135deg, #b388ff, #a982ff)';
-                    
+
                     setTimeout(() => {
                         breathingCircle.style.animation = 'none';
                         breathingCircle.style.transform = 'scale(1)';
@@ -1860,24 +1938,40 @@
             }
         });
 
-        // Send message
-        function sendMessage() {
+        // Send message to Flask backend
+        async function sendMessage() {
             const message = userInput.value.trim();
             if (message === '') return;
-            
+
             // Add user message
             addMessage(message, 'user');
             userInput.value = '';
-            
+
             // Show typing indicator
             showTypingIndicator();
-            
-            // Simulate bot response after delay
-            setTimeout(() => {
+
+            try {
+                // Send message to Flask backend
+                const response = await fetch('/get', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `msg=${encodeURIComponent(message)}`
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const botResponse = await response.text();
                 removeTypingIndicator();
-                const botResponse = getBotResponse(message);
                 addMessage(botResponse, 'bot');
-            }, 1500);
+            } catch (error) {
+                console.error('Error:', error);
+                removeTypingIndicator();
+                addMessage("Sorry, I'm having trouble connecting to the server. Please try again later.", 'bot');
+            }
         }
 
         // Show typing indicator
@@ -1885,10 +1979,10 @@
             const typingDiv = document.createElement('div');
             typingDiv.className = 'typing-indicator';
             typingDiv.innerHTML = `
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-            `;
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        `;
             chatbotMessages.appendChild(typingDiv);
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }
@@ -1911,27 +2005,6 @@
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }
 
-        // Simple bot responses
-        function getBotResponse(message) {
-            const lowerMsg = message.toLowerCase();
-            
-            if (lowerMsg.includes('hello') || lowerMsg.includes('hi') || lowerMsg.includes('hey')) {
-                return "Hello there! How are you feeling today?";
-            } else if (lowerMsg.includes('anxious') || lowerMsg.includes('anxiety') || lowerMsg.includes('stressed')) {
-                return "I'm sorry to hear you're feeling this way. Have you tried the breathing exercise on this page? It can help calm anxiety. Would you like me to guide you through it?";
-            } else if (lowerMsg.includes('depressed') || lowerMsg.includes('sad') || lowerMsg.includes('down')) {
-                return "I hear that you're feeling low. Remember that it's okay to feel this way. Have you considered reaching out to a mental health professional? You might find our 'Finding Professional Help' resource helpful.";
-            } else if (lowerMsg.includes('thank')) {
-                return "You're welcome! Remember I'm here whenever you need support.";
-            } else if (lowerMsg.includes('meditation') || lowerMsg.includes('meditate')) {
-                return "Meditation can be very helpful for mental wellbeing. The meditation section above has guided sessions you can try. Would you like recommendations for getting started?";
-            } else if (lowerMsg.includes('help') || lowerMsg.includes('support')) {
-                return "If you're in crisis and need immediate help, please contact a crisis hotline in your area. For ongoing support, I recommend exploring the resources on this page or speaking with a mental health professional.";
-            } else {
-                return "I'm here to support your mental health journey. Could you tell me more about how you're feeling or what you're looking for help with?";
-            }
-        }
-
         // Event listeners for chatbot
         sendBtn.addEventListener('click', sendMessage);
         userInput.addEventListener('keypress', (e) => {
@@ -1941,7 +2014,8 @@
         });
 
         // Initialize chatbot with welcome message
-        addMessage("Hello! I'm here to help with mental health support. How are you feeling today?", 'bot');
+        addMessage("Hello! I'm your medical and mental health assistant. How can I help you today?", 'bot');
     </script>
 </body>
+
 </html>
