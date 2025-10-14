@@ -23,7 +23,7 @@ embedding=download_embedding()
 
 index_name = "medical-chatbot"
 
-chatModel = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+chatModel = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 
 docsearch = PineconeVectorStore.from_existing_index(
     index_name=index_name,
