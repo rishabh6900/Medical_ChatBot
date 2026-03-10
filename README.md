@@ -91,40 +91,6 @@ The retrieved context is passed to a **Large Language Model (LLM)** which genera
 The generated answer is displayed to the user through the **Flask-based web chatbot interface**.
 
 
-##  Architecture
-
-The Medical Chatbot follows a **Retrieval-Augmented Generation (RAG)** architecture that combines document retrieval with a Large Language Model to generate accurate responses.
-
-### System Workflow
-
-1. **Document Loading**
-   - Medical PDF documents are loaded from the dataset.
-
-2. **Text Chunking**
-   - Documents are split into smaller chunks using a text splitter to improve retrieval efficiency.
-
-3. **Embedding Generation**
-   - Each chunk is converted into vector embeddings using an embedding model.
-
-4. **Vector Storage**
-   - The embeddings are stored in the **Pinecone vector database** for fast similarity search.
-
-5. **User Query Processing**
-   - When a user asks a question, the query is converted into an embedding.
-
-6. **Similarity Search**
-   - Pinecone retrieves the most relevant document chunks related to the query.
-
-7. **LLM Response Generation**
-   - Retrieved context is sent to the **Large Language Model (LLM)** using **LangChain**.
-
-8. **Monitoring with LangSmith**
-   - LangSmith is used for tracing, debugging, and monitoring the LLM workflow.
-
-9. **Response Delivery**
-   - The final answer is displayed through the **Flask web interface**.
-
-
 ##  Example Use Cases
 
 The Medical Chatbot can assist users with various healthcare-related queries by retrieving relevant medical knowledge and generating clear explanations.
