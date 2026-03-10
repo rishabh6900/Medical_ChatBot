@@ -38,7 +38,7 @@ conda create -n MC python=3.10.18 -y
 ```bash
 conda activate MC
 ``` 
-# step-6
+### step-6
 ```bash
 pip install -r requirements.txt
 ```
@@ -91,7 +91,7 @@ The retrieved context is passed to a **Large Language Model (LLM)** which genera
 The generated answer is displayed to the user through the **Flask-based web chatbot interface**.
 
 
-## 🔎 Architecture
+##  Architecture
 
 The Medical Chatbot follows a **Retrieval-Augmented Generation (RAG)** architecture that combines document retrieval with a Large Language Model to generate accurate responses.
 
